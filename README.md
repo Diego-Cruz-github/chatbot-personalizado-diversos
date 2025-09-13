@@ -335,11 +335,11 @@ npm install node-telegram-bot-api
 
 ## 👨‍💻 Autor
 
-**Diego Fonte** - Desenvolvedor Full Stack
+**Diego Fonte** - Desenvolvedor Full Stack | Consultor de Cyber Segurança e IA
 
 - 🌐 Website: [www.diegofontedev.com.br](https://www.diegofontedev.com.br)
+- 🏢 Empresa: [www.zowti.com](https://www.zowti.com)
 - 📧 Email: contato@diegofontedev.com.br
-- 💼 GitHub: [@Diego-Cruz-github](https://github.com/Diego-Cruz-github)
 
 ## 📄 Licença
 
@@ -349,4 +349,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ### 🎯 Projeto Profissional
 
-🚀 **Ready for Production** | 🎭 **Multi-Persona AI** | 🛡️ **Enterprise Security** | 🐳 **Docker Ready**
+Este é um **projeto de demonstração profissional** que showcases tecnologias modernas de desenvolvimento e IA. 
+
+**Ready for Production** | **Multi-Persona AI** | **Enterprise Security** | **Docker Ready**
