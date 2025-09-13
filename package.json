@@ -1,0 +1,30 @@
+{
+  "name": "chatbot-personalizado",
+  "version": "1.0.0",
+  "description": "Chatbot inteligente e personalizado com múltiplas personas",
+  "scripts": {
+    "install:all": "npm install --prefix frontend && npm install --prefix backend",
+    "dev": "concurrently \"npm run dev --prefix backend\" \"npm start --prefix frontend\"",
+    "build": "npm run build --prefix frontend",
+    "start": "npm run start --prefix backend",
+    "test": "npm test --prefix frontend && npm test --prefix backend"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/seu-usuario/chatbot-personalizado.git"
+  },
+  "keywords": [
+    "chatbot",
+    "openai",
+    "react",
+    "nodejs",
+    "express",
+    "ai",
+    "personas"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
