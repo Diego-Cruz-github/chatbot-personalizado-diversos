@@ -29,6 +29,7 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 - 🛡️ Validação robusta de inputs
 - 📊 Sistema de templates de respostas
 - 🐳 **100% Dockerizado**
+- 📱 **Integração WhatsApp e Telegram** (opcional)
 
 ### 🛠️ Stack Tecnológico
 - **Frontend**: React 18 + TypeScript + Tailwind CSS
@@ -38,6 +39,7 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 - **Validação**: Express Validator
 - **Deploy**: Docker + Docker Compose
 - **Containerização**: Docker com multi-stage builds
+- **Bots**: WhatsApp Web.js + Telegram Bot API (opcional)
 
 ## 📸 Screenshots
 
@@ -282,6 +284,49 @@ A: Edite o arquivo `frontend/src/config/personas.ts` e `backend/src/services/ope
 
 **Q: O Docker é obrigatório?**
 A: Não, mas é altamente recomendado para desenvolvimento e deploy simplificados.
+
+**Q: Como ativar WhatsApp e Telegram?**
+A: Veja a documentação completa em [INTEGRATIONS.md](INTEGRATIONS.md).
+
+## 🤖 Integrações de Bots
+
+### 📱 WhatsApp Bot
+- ✅ **Resposta automática** a mensagens privadas
+- ✅ **QR Code** para conexão rápida
+- ✅ **Todas as personas** disponíveis
+- ✅ **Session persistente**
+
+```bash
+# Ativar WhatsApp
+ENABLE_WHATSAPP=true
+
+# Instalar dependências
+npm install whatsapp-web.js qrcode-terminal
+```
+
+### 🤖 Telegram Bot  
+- ✅ **Comandos interativos** (/start, /help, /legal, etc.)
+- ✅ **Teclado inline** para personas
+- ✅ **Polling automático**
+- ✅ **Suporte a Markdown**
+
+```bash
+# Ativar Telegram
+ENABLE_TELEGRAM=true
+TELEGRAM_BOT_TOKEN=seu_token_do_botfather
+
+# Instalar dependências
+npm install node-telegram-bot-api
+```
+
+### 🚀 Configuração Rápida
+1. Configure as variáveis no `.env`
+2. Instale dependências opcionais
+3. Reinicie o servidor: `docker-compose restart`
+4. Para WhatsApp: escaneie QR code
+5. Para Telegram: converse com [@BotFather](https://t.me/botfather)
+
+📖 **Documentação completa**: [INTEGRATIONS.md](INTEGRATIONS.md)
 
 ## 📞 Suporte
 
