@@ -1,4 +1,4 @@
-# 🤖 ChatBot Personalizado Diversos - Docker Edition
+# 🤖 ChatBot Personalizado Diversos - Docker Edition (WhatsApp & Telegram Ready)
 
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
@@ -9,7 +9,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-blue.svg)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Um chatbot inteligente e personalizado com múltiplas personas especializadas, construído com React, Node.js e integração com Groq API. Totalmente dockerizado para fácil deploy e desenvolvimento.
+Um chatbot inteligente e personalizado com múltiplas personas especializadas, construído com React, Node.js e integração com Groq API. Totalmente dockerizado para fácil deploy e desenvolvimento. **Pronto para integrar com WhatsApp e Telegram**.
 
 ## 🌟 Características
 

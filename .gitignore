@@ -71,3 +71,10 @@ frontend/.env
 # Backend specific
 backend/.env
 backend/uploads/
+
+# Screenshots and demo scripts
+take_screenshots.py
+docs/screenshots/
+*.png
+*.jpg
+*.jpeg
