@@ -1,14 +1,15 @@
-# 🤖 ChatBot Personalizado
+# 🤖 ChatBot Personalizado Diversos - Docker Edition
 
 [![React](https://img.shields.io/badge/React-18.x-blue.svg)](https://reactjs.org/)
 [![Node.js](https://img.shields.io/badge/Node.js-18.x-green.svg)](https://nodejs.org/)
 [![Express](https://img.shields.io/badge/Express-5.x-lightgrey.svg)](https://expressjs.com/)
-[![OpenAI](https://img.shields.io/badge/OpenAI-API-orange.svg)](https://openai.com/)
+[![Groq](https://img.shields.io/badge/Groq-API-orange.svg)](https://groq.com/)
+[![Docker](https://img.shields.io/badge/Docker-Enabled-blue.svg)](https://docker.com/)
 [![SQLite](https://img.shields.io/badge/SQLite-3.x-lightblue.svg)](https://sqlite.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-3.x-blue.svg)](https://tailwindcss.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-Um chatbot inteligente e personalizado com múltiplas personas especializadas, construído com React, Node.js e integração com OpenAI API.
+Um chatbot inteligente e personalizado com múltiplas personas especializadas, construído com React, Node.js e integração com Groq API. Totalmente dockerizado para fácil deploy e desenvolvimento.
 
 ## 🌟 Características
 
@@ -23,18 +24,20 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 - 🎨 Interface moderna e responsiva
 - 💾 Histórico completo de conversas
 - 🔒 Autenticação e segurança
-- ⏱️ Rate limiting inteligente
+- ⏱️ Rate limiting por IP
 - 📱 Design responsivo para mobile
 - 🛡️ Validação robusta de inputs
 - 📊 Sistema de templates de respostas
+- 🐳 **100% Dockerizado**
 
 ### 🛠️ Stack Tecnológico
 - **Frontend**: React 18 + TypeScript + Tailwind CSS
 - **Backend**: Node.js + Express + SQLite
-- **IA**: OpenAI GPT-3.5-turbo/GPT-4
+- **IA**: Groq API com llama-3.1-8b-instant
 - **Segurança**: Helmet, CORS, Rate Limiting
 - **Validação**: Express Validator
-- **Deploy**: Vercel (Frontend) + Railway/Render (Backend)
+- **Deploy**: Docker + Docker Compose
+- **Containerização**: Docker com multi-stage builds
 
 ## 📸 Screenshots
 
@@ -47,35 +50,75 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 ### Histórico de Conversas
 ![Conversation History](docs/images/conversation-history.png)
 
-## 🔧 Instalação Local
+## 🐳 Instalação com Docker (Recomendado)
+
+### Pré-requisitos
+- Docker e Docker Compose
+- Chave da API Groq
+
+### 1. Clone o Repositório
+```bash
+git clone https://github.com/Diego-Cruz-github/chatbot-personalizado-diversos.git
+cd chatbot-personalizado-diversos
+```
+
+### 2. Configurar Variáveis de Ambiente
+```bash
+# Copie o arquivo de ambiente
+cp backend/.env.example backend/.env
+
+# Configure sua chave da API Groq no backend/.env:
+GROQ_API_KEY=sua_chave_groq_aqui
+GROQ_MODEL=llama-3.1-8b-instant
+PORT=3001
+FRONTEND_URL=http://localhost:3002
+```
+
+### 3. Executar com Docker
+```bash
+# Build e executar containers
+docker-compose up --build
+
+# Ou em background
+docker-compose up -d
+```
+
+**Acesso:**
+- Frontend: http://localhost:3002
+- Backend API: http://localhost:3001
+
+### 4. Comandos Docker Úteis
+```bash
+# Ver logs
+docker-compose logs -f
+
+# Parar containers
+docker-compose down
+
+# Rebuild completo
+docker-compose down && docker-compose build --no-cache && docker-compose up
+```
+
+## 🔧 Instalação Local (Alternativa)
 
 ### Pré-requisitos
 - Node.js 18+ 
 - npm ou yarn
-- Chave da API OpenAI
+- Chave da API Groq
 
-### 1. Clone o Repositório
-```bash
-git clone https://github.com/seu-usuario/chatbot-personalizado.git
-cd chatbot-personalizado
-```
-
-### 2. Configuração do Backend
+### 1. Configuração do Backend
 ```bash
 cd backend
 npm install
 
-# Copie o arquivo de ambiente
-cp .env.example .env
-
 # Configure suas variáveis de ambiente no .env:
-# OPENAI_API_KEY=sua_chave_openai_aqui
+# GROQ_API_KEY=sua_chave_groq_aqui
 # NODE_ENV=development
 # PORT=3001
-# FRONTEND_URL=http://localhost:3000
+# FRONTEND_URL=http://localhost:3002
 ```
 
-### 3. Configuração do Frontend
+### 2. Configuração do Frontend
 ```bash
 cd ../frontend
 npm install
@@ -84,7 +127,7 @@ npm install
 echo "REACT_APP_API_URL=http://localhost:3001/api" > .env
 ```
 
-### 4. Executar em Desenvolvimento
+### 3. Executar em Desenvolvimento
 ```bash
 # Terminal 1 - Backend
 cd backend
@@ -94,10 +137,6 @@ npm run dev
 cd frontend
 npm start
 ```
-
-A aplicação estará disponível em:
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:3001
 
 ## 📚 Documentação da API
 
@@ -111,6 +150,7 @@ Envia uma mensagem para o chatbot.
 {
   "message": "Olá, preciso de ajuda com um contrato",
   "persona": "legal",
+  "mode": "expert",
   "conversationId": "uuid-opcional"
 }
 ```
@@ -127,19 +167,6 @@ Envia uma mensagem para o chatbot.
 #### GET /api/conversations
 Lista todas as conversas.
 
-**Response:**
-```json
-[
-  {
-    "id": "uuid",
-    "title": "Consulta sobre contrato",
-    "persona": "legal",
-    "created_at": "2025-01-15T10:30:00Z",
-    "message_count": 8
-  }
-]
-```
-
 #### GET /api/conversations/:id
 Obtém uma conversa específica com todas as mensagens.
 
@@ -147,37 +174,36 @@ Obtém uma conversa específica com todas as mensagens.
 Remove uma conversa e todas suas mensagens.
 
 ### Rate Limits
-- **Geral**: 100 requests por 15 minutos
+- **Geral**: 100 requests por 15 minutos por IP
 - **Chat**: 10 mensagens por minuto por IP
 
 ## 🌐 Deploy
 
-### Frontend (Vercel)
+### Deploy com Docker (Produção)
 ```bash
-# No diretório frontend
-npm run build
+# Build para produção
+docker-compose -f docker-compose.prod.yml up --build -d
 
-# Deploy automático conectando o repositório GitHub ao Vercel
-# Ou usando Vercel CLI:
-npx vercel --prod
+# Configure variáveis de ambiente:
+# GROQ_API_KEY=sua_chave_groq
+# NODE_ENV=production
+# FRONTEND_URL=https://seu-dominio.com
 ```
 
-### Backend (Railway/Render)
+### Deploy Tradicional
 ```bash
-# Configure as variáveis de ambiente:
-# OPENAI_API_KEY
-# NODE_ENV=production
-# PORT (automático no Railway/Render)
-# FRONTEND_URL=https://seu-frontend.vercel.app
+# Frontend (Vercel/Netlify)
+cd frontend && npm run build
 
-# O deploy é automático via GitHub
+# Backend (Railway/Render)
+# Configure as variáveis de ambiente no painel da plataforma
 ```
 
 ### Variáveis de Ambiente para Produção
 ```env
 # Backend
-OPENAI_API_KEY=sk-proj-...
-OPENAI_MODEL=gpt-3.5-turbo
+GROQ_API_KEY=gsk-...
+GROQ_MODEL=llama-3.1-8b-instant
 NODE_ENV=production
 PORT=3001
 FRONTEND_URL=https://seu-app.vercel.app
@@ -193,6 +219,7 @@ JWT_SECRET=seu_jwt_secret_super_seguro
 - ✅ CORS configurado
 - ✅ Sanitização de dados
 - ✅ Logs de segurança
+- ✅ Docker security best practices
 
 ### Recomendações Adicionais
 - Use HTTPS em produção
@@ -203,13 +230,13 @@ JWT_SECRET=seu_jwt_secret_super_seguro
 ## 🧪 Testes
 
 ```bash
-# Backend
-cd backend
-npm test
+# Com Docker
+docker-compose exec backend npm test
+docker-compose exec frontend npm test
 
-# Frontend
-cd frontend
-npm test
+# Local
+cd backend && npm test
+cd frontend && npm test
 ```
 
 ## 📈 Monitoramento e Logs
@@ -217,8 +244,9 @@ npm test
 O sistema inclui logging detalhado:
 - Requests HTTP (Morgan)
 - Erros de aplicação
-- Interações com OpenAI
-- Rate limiting
+- Interações com Groq API
+- Rate limiting por IP
+- Docker container logs
 
 ## 🤝 Contribuição
 
@@ -238,22 +266,35 @@ O sistema inclui logging detalhado:
 - [ ] Integração com mais provedores de IA
 - [ ] Sistema de plugins
 - [ ] API webhooks
+- [ ] Kubernetes deployment
+- [ ] CI/CD pipeline
 
 ## ❓ FAQ
 
-**Q: Como obter uma chave da OpenAI?**
-A: Acesse https://platform.openai.com/api-keys e crie uma nova chave API.
+**Q: Como obter uma chave da Groq?**
+A: Acesse https://console.groq.com/keys e crie uma nova chave API.
 
-**Q: Posso usar outros modelos além do GPT-3.5?**
-A: Sim! Configure a variável OPENAI_MODEL no .env com gpt-4 ou outros modelos disponíveis.
+**Q: Posso usar outros modelos Groq?**
+A: Sim! Configure a variável GROQ_MODEL no .env com outros modelos disponíveis como llama-3.1-70b-versatile.
 
 **Q: Como personalizar as personas?**
 A: Edite o arquivo `frontend/src/config/personas.ts` e `backend/src/services/openai.js`.
 
+**Q: O Docker é obrigatório?**
+A: Não, mas é altamente recomendado para desenvolvimento e deploy simplificados.
+
 ## 📞 Suporte
 
-- 🐛 Issues: [GitHub Issues](https://github.com/seu-usuario/chatbot-personalizado/issues)
-- 💬 Discussões: [GitHub Discussions](https://github.com/seu-usuario/chatbot-personalizado/discussions)
+- 🐛 Issues: [GitHub Issues](https://github.com/Diego-Cruz-github/chatbot-personalizado-diversos/issues)
+- 💬 Discussões: [GitHub Discussions](https://github.com/Diego-Cruz-github/chatbot-personalizado-diversos/discussions)
+
+## 👨‍💻 Autor
+
+**Diego Fonte** - Desenvolvedor Full Stack
+
+- 🌐 Website: [www.diegofontedev.com.br](https://www.diegofontedev.com.br)
+- 📧 Email: contato@diegofontedev.com.br
+- 💼 GitHub: [@Diego-Cruz-github](https://github.com/Diego-Cruz-github)
 
 ## 📄 Licença
 
@@ -261,10 +302,6 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 
 ---
 
-**⭐ Se este projeto foi útil para você, considere dar uma estrela no GitHub!**
-
----
-
 ### 🎯 Projeto Profissional
 
-🚀 **Ready for Production** | 🎭 **Multi-Persona AI** | 🛡️ **Enterprise Security**
+🚀 **Ready for Production** | 🎭 **Multi-Persona AI** | 🛡️ **Enterprise Security** | 🐳 **Docker Ready**
