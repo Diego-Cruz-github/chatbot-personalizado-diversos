@@ -139,7 +139,14 @@ function App() {
           <div className="flex justify-between items-center py-4">
             <div className="flex items-center">
               <h1 className="text-2xl font-bold text-gray-900">Chatbot Personalizado</h1>
-              <span className="ml-3 text-lg text-blue-600 font-bold">made by Diego Fonte</span>
+              <a 
+                href="https://www.diegofontedev.com.br" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="ml-3 text-lg text-blue-600 font-bold hover:text-blue-700 transition-colors cursor-pointer"
+              >
+                made by Diego Fonte
+              </a>
               <div className="flex items-center ml-4 space-x-2">
                 {currentPersona && (
                   <span className={`px-3 py-1 rounded-full text-white text-sm ${currentPersona.color}`}>
