@@ -75,6 +75,12 @@ backend/uploads/
 # Screenshots and demo scripts
 take_screenshots.py
 docs/screenshots/
+
+# Images - block all except docs/images
 *.png
 *.jpg
 *.jpeg
+# Allow documentation images (must come after general block)
+!docs/images/*.png
+!docs/images/*.jpg
+!docs/images/*.jpeg
