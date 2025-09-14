@@ -65,6 +65,10 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 ![Demo Avançado](docs/images/extra-demo.jpg)
 *Demonstração avançada das funcionalidades e interações do sistema*
 
+### 🎥 Demo em Vídeo
+![Demo do Chatbot](docs/images/chatbot-demo.gif)
+*Demonstração completa em vídeo das funcionalidades do chatbot personalizado*
+
 </div>
 
 ## 🐳 Instalação com Docker (Recomendado)
