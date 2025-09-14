@@ -45,29 +45,17 @@ Um chatbot inteligente e personalizado com múltiplas personas especializadas, c
 
 <div align="center">
 
-### Interface Principal
-![Chat Interface](docs/images/chat-interface.jpg)
-*Interface moderna e responsiva com design profissional*
-
-### Seleção de Personas  
-![Persona Selection](docs/images/persona-selection.jpg)
-*Sistema de personas especializadas (Legal, Sales, Support, Personal)*
-
-### Conversa com o Criador
-![Conversation History](docs/images/conversation-history.jpg)  
-*Demonstração da conversa com Diego Fonte, criador do sistema*
-
-### Interface Completa
-![Interface Completa](docs/images/interface-completa.jpg)
-*Visão completa da aplicação funcionando com todas as funcionalidades*
-
-### Demo Avançado
-![Demo Avançado](docs/images/extra-demo.jpg)
-*Demonstração avançada das funcionalidades e interações do sistema*
-
-### 🎥 Demo em Vídeo
 ![Demo do Chatbot](docs/images/chatbot-demo.gif)
-*Demonstração completa em vídeo das funcionalidades do chatbot personalizado*
+
+![Chat Interface](docs/images/chat-interface.jpg)
+
+![Persona Selection](docs/images/persona-selection.jpg)
+
+![Conversation History](docs/images/conversation-history.jpg)
+
+![Interface Completa](docs/images/interface-completa.jpg)
+
+![Demo Avançado](docs/images/extra-demo.jpg)
 
 </div>
 
