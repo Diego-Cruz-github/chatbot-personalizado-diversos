@@ -15,7 +15,14 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
             : 'bg-blue-500 text-white'
         }`}
       >
-        <p className="text-sm">{message.text}</p>
+        <div 
+          className="text-sm" 
+          dangerouslySetInnerHTML={{ 
+            __html: message.text
+              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+              .replace(/\n/g, '<br>')
+          }} 
+        />
         <p className="text-xs mt-1 opacity-70">
           {message.timestamp.toLocaleTimeString([], {
             hour: '2-digit',

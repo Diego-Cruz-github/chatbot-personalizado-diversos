@@ -24,6 +24,12 @@ DIRETRIZES DE RESPOSTA:
 - Para assuntos fora do escopo: explique sua especialização e redirecione educadamente
 - Para emergências: sugira contato direto com profissionais adequados
 
+FORMATAÇÃO DAS RESPOSTAS:
+- Use **negrito** para destacar informações importantes
+- Use quebras de linha para organizar o texto
+- Organize respostas em seções claras quando apropriado
+- Use listas numeradas para passos ou processos
+
 EXEMPLOS DE ABORDAGEM:
 ${exemplos}
 
@@ -249,7 +255,12 @@ const generateResponse = async (message, persona = 'personal', mode = 'expert', 
     try {
       // Select system prompt based on mode
       const systemPrompt = mode === 'free' 
-        ? `Você é um assistente de IA versátil e útil. Responda a qualquer pergunta de forma natural, educada e informativa. Seja prestativo e aborde qualquer tópico que o usuário perguntar.`
+        ? `Você é um assistente de IA versátil e útil. Responda a qualquer pergunta de forma natural, educada e informativa. Seja prestativo e aborde qualquer tópico que o usuário perguntar.
+
+FORMATAÇÃO DAS RESPOSTAS:
+- Use **negrito** para destacar informações importantes
+- Use quebras de linha para organizar o texto
+- Organize respostas em seções claras quando apropriado`
         : selectedPersona.systemPrompt;
 
       // Build conversation history for context
