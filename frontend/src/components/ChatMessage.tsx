@@ -5,6 +5,34 @@ interface ChatMessageProps {
   message: Message;
 }
 
+// Função para processar formatação de texto
+const formatText = (text: string): React.ReactNode => {
+  // Quebra o texto em linhas
+  const lines = text.split('\n');
+  
+  return lines.map((line, lineIndex) => {
+    // Processa negrito (**texto**)
+    const parts = line.split(/(\*\*.*?\*\*)/g);
+    
+    const formattedLine = parts.map((part, partIndex) => {
+      if (part.startsWith('**') && part.endsWith('**')) {
+        // Remove os asteriscos e aplica negrito
+        const boldText = part.slice(2, -2);
+        return <strong key={`${lineIndex}-${partIndex}`}>{boldText}</strong>;
+      }
+      return part;
+    });
+    
+    // Retorna a linha formatada com quebra de linha (exceto a última)
+    return (
+      <span key={lineIndex}>
+        {formattedLine}
+        {lineIndex < lines.length - 1 && <br />}
+      </span>
+    );
+  });
+};
+
 const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
   return (
     <div className={`flex ${message.isBot ? 'justify-start' : 'justify-end'} mb-4`}>
@@ -15,14 +43,9 @@ const ChatMessage: React.FC<ChatMessageProps> = ({ message }) => {
             : 'bg-blue-500 text-white'
         }`}
       >
-        <div 
-          className="text-sm" 
-          dangerouslySetInnerHTML={{ 
-            __html: message.text
-              .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
-              .replace(/\n/g, '<br>')
-          }} 
-        />
+        <div className="text-sm" style={{ fontFamily: 'system-ui, -apple-system, "Segoe UI", "Roboto", "Ubuntu", "Cantarell", sans-serif' }}>
+          {formatText(message.text)}
+        </div>
         <p className="text-xs mt-1 opacity-70">
           {message.timestamp.toLocaleTimeString([], {
             hour: '2-digit',

@@ -29,6 +29,8 @@ FORMATAÇÃO DAS RESPOSTAS:
 - Use quebras de linha para organizar o texto
 - Organize respostas em seções claras quando apropriado
 - Use listas numeradas para passos ou processos
+- Separe diferentes tópicos com quebras de linha duplas
+- Use emoticons para tornar as respostas mais amigáveis e visuais (📋, ✅, 🎯, 💡, ⚠️, 🔧, etc.)
 
 EXEMPLOS DE ABORDAGEM:
 ${exemplos}
@@ -260,7 +262,10 @@ const generateResponse = async (message, persona = 'personal', mode = 'expert', 
 FORMATAÇÃO DAS RESPOSTAS:
 - Use **negrito** para destacar informações importantes
 - Use quebras de linha para organizar o texto
-- Organize respostas em seções claras quando apropriado`
+- Organize respostas em seções claras quando apropriado
+- Use listas numeradas para passos ou processos
+- Separe diferentes tópicos com quebras de linha duplas
+- Use emoticons para tornar as respostas mais amigáveis e visuais (📋, ✅, 🎯, 💡, ⚠️, 🔧, etc.)`
         : selectedPersona.systemPrompt;
 
       // Build conversation history for context
