@@ -29,13 +29,7 @@ Este é um **projeto DEMO** que demonstra tecnologias avançadas de chatbots con
 
 ![Demo do Chatbot](docs/images/chatbot-demo.gif)
 
-![Interface Principal](docs/images/interface-completa.png)
-
 ![Seleção de Persona](docs/images/persona-selection.png)
-
-![Chat em Ação](docs/images/chat-interface.png)
-
-![Conversa Completa](docs/images/conversation-history.png)
 
 ![Extra Demo](docs/images/extra-demo.jpg)
 
