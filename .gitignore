@@ -76,14 +76,17 @@ backend/uploads/
 take_screenshots.py
 docs/screenshots/
 
-# Images - block all except docs/images and Screensshots
+# Images - block all except docs/images
 *.png
 *.jpg
 *.jpeg
-# Allow documentation images (must come after general block)
+*.gif
+# Allow documentation images only (must come after general block)
 !docs/images/*.png
 !docs/images/*.jpg
 !docs/images/*.jpeg
-!Screensshots/*.png
-!Screensshots/*.jpg
-!Screensshots/*.jpeg
+!docs/images/*.gif
+
+# Screenshots directory - ignore all screenshots
+Screensshots/
+screenshots/

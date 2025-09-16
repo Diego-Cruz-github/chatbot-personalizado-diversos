@@ -64,17 +64,17 @@ Este é um **projeto DEMO** que demonstra tecnologias avançadas de chatbots con
 
 <div align="center">
 
-![Demo do Chatbot](Screensshots/Gravando-2025-09-15-184136.gif)
+![Demo do Chatbot](docs/images/chatbot-demo.gif)
 
-![Interface Principal](Screensshots/Captura%20de%20tela%202025-09-15%20184211.jpg)
+![Interface Principal](docs/images/interface-completa.png)
 
-![Seleção de Persona](Screensshots/Captura%20de%20tela%202025-09-15%20184228.jpg)
+![Seleção de Persona](docs/images/persona-selection.png)
 
-![Chat em Ação](Screensshots/Captura%20de%20tela%202025-09-15%20184257.jpg)
+![Chat em Ação](docs/images/chat-interface.png)
 
-![Conversa Completa](Screensshots/Captura%20de%20tela%202025-09-15%20184319.jpg)
+![Conversa Completa](docs/images/conversation-history.png)
 
-![Histórico de Conversas](Screensshots/Captura%20de%20tela%202025-09-15%20184348.jpg)
+![Extra Demo](docs/images/extra-demo.jpg)
 
 </div>
 
