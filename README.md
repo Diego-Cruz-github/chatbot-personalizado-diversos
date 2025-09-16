@@ -35,6 +35,14 @@ Este é um **projeto DEMO** que demonstra tecnologias avançadas de chatbots con
 
 </div>
 
+## 👨‍💻 Autor
+
+**Diego Fonte** - Desenvolvedor Full Stack | Consultor de Cyber Segurança e IA
+
+- 🌐 Website: [www.diegofontedev.com.br](https://www.diegofontedev.com.br)
+- 🏢 Empresa: [www.zowti.com](https://www.zowti.com)
+- 📧 Email: contato@diegofontedev.com.br
+
 ## 🌟 Características
 
 ### 🎭 Personas Especializadas (Exemplos - Totalmente Personalizáveis)
@@ -381,14 +389,6 @@ npm install node-telegram-bot-api
 
 - 🐛 Issues: [GitHub Issues](https://github.com/Diego-Cruz-github/chatbot-personalizado-diversos/issues)
 - 💬 Discussões: [GitHub Discussions](https://github.com/Diego-Cruz-github/chatbot-personalizado-diversos/discussions)
-
-## 👨‍💻 Autor
-
-**Diego Fonte** - Desenvolvedor Full Stack | Consultor de Cyber Segurança e IA
-
-- 🌐 Website: [www.diegofontedev.com.br](https://www.diegofontedev.com.br)
-- 🏢 Empresa: [www.zowti.com](https://www.zowti.com)
-- 📧 Email: contato@diegofontedev.com.br
 
 ## 📄 Licença
 
