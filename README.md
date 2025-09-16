@@ -23,6 +23,24 @@ Este é um **projeto DEMO** que demonstra tecnologias avançadas de chatbots con
 - **Pronto para Produção**: WhatsApp, Telegram, API completa
 - **Flexibilidade Total**: Adapte para qualquer nicho de negócio
 
+## 📸 Screenshots
+
+<div align="center">
+
+![Demo do Chatbot](docs/images/chatbot-demo.gif)
+
+![Interface Principal](docs/images/interface-completa.png)
+
+![Seleção de Persona](docs/images/persona-selection.png)
+
+![Chat em Ação](docs/images/chat-interface.png)
+
+![Conversa Completa](docs/images/conversation-history.png)
+
+![Extra Demo](docs/images/extra-demo.jpg)
+
+</div>
+
 ## 🌟 Características
 
 ### 🎭 Personas Especializadas (Exemplos - Totalmente Personalizáveis)
@@ -59,24 +77,6 @@ Este é um **projeto DEMO** que demonstra tecnologias avançadas de chatbots con
 - **Deploy**: Docker + Docker Compose
 - **Containerização**: Docker com multi-stage builds
 - **Bots**: WhatsApp Web.js + Telegram Bot API (opcional)
-
-## 📸 Screenshots
-
-<div align="center">
-
-![Demo do Chatbot](docs/images/chatbot-demo.gif)
-
-![Interface Principal](docs/images/interface-completa.png)
-
-![Seleção de Persona](docs/images/persona-selection.png)
-
-![Chat em Ação](docs/images/chat-interface.png)
-
-![Conversa Completa](docs/images/conversation-history.png)
-
-![Extra Demo](docs/images/extra-demo.jpg)
-
-</div>
 
 ## 🐳 Instalação com Docker (Recomendado)
 
@@ -412,7 +412,3 @@ Confira outros projetos DEMO similares:
 Este é um **projeto de demonstração profissional** que showcases tecnologias modernas de desenvolvimento e IA aplicadas a chatbots conversacionais.
 
 **Ready for Production** | **Multi-Persona AI** | **Enterprise Security** | **Docker Ready** | **100% Customizable**
-
----
-
-*🎉 **DEMO** - Desenvolvido para demonstrar o potencial de chatbots inteligentes personalizáveis para qualquer tipo de negócio.*
