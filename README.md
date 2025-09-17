@@ -401,6 +401,20 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 Confira outros projetos DEMO similares:
 - 🚀 **[Gerador Inteligente de Orçamentos](https://github.com/seu-usuario/gerador-orcamentos)** - Sistema conversacional para orçamentos profissionais com BI integrado
 
+## 👨‍💻 Autor
+
+**Diego Fonte** - Desenvolvedor Full Stack | Consultor de Cyber Segurança e IA
+
+- 🌐 Website: [www.diegofontedev.com.br](https://www.diegofontedev.com.br)
+- 🏢 Empresa: [www.zowti.com](https://www.zowti.com)
+- 📧 Email: contato@diegofontedev.com.br
+
+## 📄 Licença
+
+Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICENSE) para detalhes.
+
+---
+
 ### 🎯 Projeto DEMO Profissional
 
 Este é um **projeto de demonstração profissional** que showcases tecnologias modernas de desenvolvimento e IA aplicadas a chatbots conversacionais.
