@@ -405,7 +405,7 @@ Este projeto está licenciado sob a Licença MIT - veja o arquivo [LICENSE](LICE
 ## 🔗 Projetos Relacionados
 
 Confira outros projetos DEMO similares:
-- 🚀 **[Gerador Inteligente de Orçamentos](https://github.com/seu-usuario/gerador-orcamentos)** - Sistema conversacional para orçamentos profissionais com BI integrado
+- 🚀 **[Gerador Inteligente de Orçamentos](https://github.com/Diego-Cruz-github/Gerador-Inteligente-de-Orcamentos)** - Sistema conversacional para orçamentos profissionais com BI integrado
 
 ## 👨‍💻 Autor
 
